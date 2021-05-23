@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "3a8e9d2c-f8bf-42a8-a41b-f0b253d2350a",
+		"name": "Netlify File Upload Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload File (Local)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uploadFile",
+							"type": "file",
+							"src": "/C:/Users/Admin/Documents/HelloWorld.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8888/.netlify/functions/api/uploadImage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						".netlify",
+						"functions",
+						"api",
+						"uploadImage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload File (Server)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uploadFile",
+							"type": "file",
+							"src": "/C:/Users/Admin/Documents/HelloWorld.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://netlify-file-upload-test.netlify.app/.netlify/functions/api/uploadImage",
+					"protocol": "http",
+					"host": [
+						"netlify-file-upload-test",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"api",
+						"uploadImage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
