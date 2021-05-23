@@ -11,6 +11,6 @@
     "serverless-http": "^2.7.0"
   },
   "scripts": {
-    
+    "build": "npm install"
   }
 }
