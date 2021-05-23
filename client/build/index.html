@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Test File Upload</title>
+
+    <style>
+        body{
+            background-color: #f7f8f9;
+        }
+        .formFileUpload{
+            
+        }
+        .formFileUpload input{
+            display: block;
+            width: 100%;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+        .formFileUpload button{
+            margin-top: 10px;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="max-width: 500px;margin: 0 auto;" >
+
+        <h1
+            style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;padding-top: 30vh;"
+        >Netlify Test File Upload</h1>
+
+        <form class="formFileUpload" action="/.netlify/functions/api/uploadImage" method="POST" enctype="multipart/form-data">
+            <input type="file" name="uploadFile" />
+            <button type="submit" >Upload</button>
+        </form>
+
+        <hr style="margin-top: 20px;margin-bottom: 20px;">
+
+        <h4>Info</h4>
+        <p style="margin-top: 20px;">When i upload file from local machine i am getting different file size.</p>
+        <img src="./Screenshot 2021-05-23 232756.png" alt="File Size when uploaded from windows." style="width: 100%;border: 1px solid black;"  />
+        
+        <p style="margin-top: 20px;" >When i upload file from deployed server i am getting correct file size.</p>
+        <img src="./Screenshot 2021-05-23 232756.png" alt="File Size when uploaded from server." style="width: 100%;border: 1px solid black;" />
+
+    </div>
+
+</body>
+</html>
